@@ -1,0 +1,402 @@
+/* =========================================================================
+   STYLES.CSS — VISUAL DESIGN
+   =========================================================================
+   This controls colours, fonts, spacing, and layout. Most beginner edits
+   (workshops, dates, Tally form IDs, links) belong in events.js instead
+   — but if you want to change the two brand colours or the fonts, look
+   at DESIGN TOKENS near the top of this file, that's the easiest place
+   to do it.
+   ========================================================================= */
+
+/* =====================================================================
+   DESIGN TOKENS
+   - Hero colors are fixed per brief: yellow #f8f022 + purple #cb6ce6
+   - Everything else is a warm "paper corkboard" neutral so the hero
+     colors pop instead of being used everywhere
+   ===================================================================== */
+:root {
+  --yellow: #f8f022;
+  --purple: #cb6ce6;
+  --ink: #241f3d;
+  --paper: #faf6ee;
+  --paper-dim: #f1ebdd;
+  --card: #fffdf8;
+  --tape: #cb6ce6;
+  --line: rgba(36, 31, 61, 0.14);
+
+  --font-display: 'Glacial Indifference', 'Century Gothic', Avenir, 'Poppins', sans-serif;
+  --font-body: 'Poppins', 'Segoe UI', sans-serif;
+  --font-mono: 'Space Mono', 'Courier New', monospace;
+}
+
+/*
+  EDIT ME: Glacial Indifference is a paid/licensed font, so it isn't
+  loaded from a free CDN here. The @font-face block below is left
+  ready for you — if you own the font files, create a "fonts" folder
+  next to this stylesheet, drop the files in, and uncomment + point
+  the src paths at them. Until then, the CSS falls back to Century
+  Gothic / Avenir / Poppins, which are close in feel (clean geometric
+  sans) so the site still looks right without it.
+
+  @font-face {
+    font-family: 'Glacial Indifference';
+    src: url('fonts/GlacialIndifference-Bold.woff2') format('woff2');
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: 'Glacial Indifference';
+    src: url('fonts/GlacialIndifference-Regular.woff2') format('woff2');
+    font-weight: 400;
+  }
+*/
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+img, svg { display: block; max-width: 100%; }
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  margin: 0 0 0.4em;
+  letter-spacing: 0.01em;
+}
+
+a { color: inherit; }
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section { padding: 64px 0; }
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--purple);
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+/* =====================================================================
+   HERO
+   ===================================================================== */
+.hero {
+  position: relative;
+  padding: 88px 0 96px;
+  background: linear-gradient(160deg, var(--yellow) 0%, var(--yellow) 46%, var(--purple) 46%, var(--purple) 100%);
+  overflow: hidden;
+}
+.hero::before {
+  /* a torn-paper edge at the bottom of the hero, like a flyer ripped from a board */
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -1px;
+  height: 34px;
+  background: var(--paper);
+  clip-path: polygon(
+    0% 100%, 0% 40%, 3% 60%, 6% 30%, 9% 55%, 12% 20%, 15% 50%, 18% 35%,
+    21% 60%, 24% 25%, 27% 45%, 30% 15%, 33% 55%, 36% 30%, 39% 50%,
+    42% 20%, 45% 60%, 48% 35%, 51% 55%, 54% 25%, 57% 45%, 60% 15%,
+    63% 55%, 66% 30%, 69% 50%, 72% 20%, 75% 60%, 78% 35%, 81% 55%,
+    84% 25%, 87% 45%, 90% 15%, 93% 55%, 96% 30%, 100% 50%, 100% 100%
+  );
+}
+.hero-inner { position: relative; z-index: 1; padding-top: 18px; }
+
+/* Fun noticeboard-style flourish: a little thumbtack and two strips of
+   washi tape "pinning" the headline to the hero, like a flyer on a
+   corkboard. Reuses the existing brand colours only. */
+.hero-pin {
+  position: absolute;
+  top: -6px;
+  left: 2px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--ink);
+  box-shadow: 0 3px 0 rgba(36,31,61,0.2);
+}
+.hero-pin::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: 50%;
+  background: var(--yellow);
+}
+.hero-tape-left,
+.hero-tape-right {
+  position: absolute;
+  width: 66px;
+  height: 22px;
+  opacity: 0.85;
+  border-radius: 1px;
+}
+.hero-tape-left {
+  top: -4px;
+  left: 44px;
+  background: var(--purple);
+  transform: rotate(-7deg);
+}
+.hero-tape-right {
+  top: 18px;
+  right: 6px;
+  background: var(--ink);
+  transform: rotate(9deg);
+}
+
+.hero h1 {
+  font-size: clamp(2.3rem, 9vw, 3.4rem);
+  line-height: 1.05;
+  color: var(--ink);
+  max-width: 11ch;
+  transform: rotate(-1deg);
+}
+.hero p.tagline {
+  font-size: 1.08rem;
+  max-width: 36ch;
+  margin: 18px 0 30px;
+  color: var(--ink);
+}
+.hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 22px;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+}
+.btn:active { transform: scale(0.97); }
+.btn:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 2px;
+}
+.btn-primary { background: var(--ink); color: var(--yellow); }
+.btn-outline { background: transparent; color: var(--ink); border: 2px solid var(--ink); }
+
+/* =====================================================================
+   SECTION HEADERS (shared)
+   ===================================================================== */
+.section-head { margin-bottom: 32px; }
+.section-head h2 { font-size: clamp(1.6rem, 6vw, 2.1rem); }
+.section-head p { color: rgba(36,31,61,0.72); max-width: 46ch; }
+
+/* =====================================================================
+   WORKSHOPS — pinned-to-a-corkboard card style (signature element).
+   Each card carries its own date buttons and Continue button, so
+   browsing workshops and picking a date live in the same place.
+   ===================================================================== */
+.board {
+  background: var(--paper-dim);
+  background-image:
+    radial-gradient(rgba(36,31,61,0.05) 1px, transparent 1px);
+  background-size: 14px 14px;
+  border-radius: 20px;
+  padding: 28px 20px;
+}
+.card-list { display: flex; flex-direction: column; gap: 28px; }
+.card {
+  position: relative;
+  background: var(--card);
+  border-radius: 6px;
+  padding: 22px 20px 20px;
+  box-shadow: 0 10px 24px rgba(36,31,61,0.10);
+  border: 1px solid var(--line);
+}
+.card:nth-child(1) { transform: rotate(-1.2deg); }
+.card:nth-child(2) { transform: rotate(1deg); }
+.card:nth-child(3) { transform: rotate(-0.6deg); }
+.tape {
+  position: absolute;
+  top: -12px; left: 50%;
+  transform: translateX(-50%) rotate(-3deg);
+  width: 64px; height: 22px;
+  background: var(--tape);
+  opacity: 0.85;
+  border-radius: 2px;
+}
+.card.event .tape { background: var(--yellow); }
+.card-kind {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--purple);
+  margin-bottom: 6px;
+  display: block;
+}
+.card.event .card-kind { color: #b58900; }
+.card h3 { font-size: 1.25rem; margin-bottom: 6px; }
+.card .meta {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: rgba(36,31,61,0.65);
+  margin-bottom: 10px;
+}
+.card p.desc { margin: 0 0 14px; font-size: 0.95rem; }
+.card .spots {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+
+.card .date-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(36,31,61,0.55);
+  margin-bottom: 8px;
+}
+
+/* =====================================================================
+   DATE PICKER — this is the original date-button style from the first
+   version of the site (2-column grid, roomy padding, card background,
+   purple active border), preserved as-is, with a checkmark badge added
+   so the selected state is unmistakable at a glance.
+   ===================================================================== */
+.date-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.date-chip {
+  position: relative;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  background: var(--card);
+  border: 2px solid var(--line);
+  border-radius: 12px;
+  padding: 14px 10px 14px 36px;
+  text-align: left;
+  cursor: pointer;
+  user-select: none;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.date-chip .date-chip-text {
+  display: block;
+  line-height: 1.3;
+}
+.date-chip[aria-pressed="true"] {
+  border-color: var(--purple);
+  background: #f6e9fb;
+}
+.date-chip .check {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--purple);
+  color: #fff;
+  font-size: 0.66rem;
+  line-height: 18px;
+  text-align: center;
+  transform: translateY(-50%) scale(0);
+  transition: transform 0.15s ease;
+}
+.date-chip[aria-pressed="true"] .check {
+  transform: translateY(-50%) scale(1);
+}
+
+/* Continue button, shown beneath each workshop's date buttons. Reuses
+   the site's existing primary button style. */
+.continue-btn {
+  width: 100%;
+}
+.continue-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* =====================================================================
+   TALLY FORM EMBED
+   Used only by the General Suggestions section now (Section 3) — a soft
+   rounded frame so the real Tally form feels like part of the
+   noticeboard rather than a bolted-on widget. The two workshop forms
+   open as popups instead, so they no longer use this wrapper.
+   ===================================================================== */
+.tally-embed-wrap {
+  border-radius: 14px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 14px;
+  overflow: hidden;
+}
+.tally-embed-wrap iframe {
+  width: 100%;
+  border: none;
+  display: block;
+}
+
+/* =====================================================================
+   INSTAGRAM CONNECT
+   ===================================================================== */
+.connect-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.connect-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 20px;
+  border-radius: 16px;
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
+  box-shadow: 0 8px 18px rgba(36,31,61,0.12);
+}
+.connect-btn .icon {
+  width: 40px; height: 40px;
+  flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(255,255,255,0.18);
+  border-radius: 50%;
+}
+.connect-btn .sub { display: block; font-weight: 400; font-size: 0.82rem; opacity: 0.9; }
+.connect-instagram { background: radial-gradient(circle at 30% 110%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+
+footer {
+  padding: 40px 0 60px;
+  text-align: center;
+  font-size: 0.82rem;
+  color: rgba(36,31,61,0.55);
+}
+
+@media (min-width: 640px) {
+  .card-list { flex-direction: row; flex-wrap: wrap; }
+  .card { flex: 1 1 260px; }
+  .connect-grid { flex-direction: row; }
+  .connect-btn { flex: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
