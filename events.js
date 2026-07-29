@@ -71,7 +71,7 @@ const CONFIG = {
   workshops: [
     {
       kind: "Interest Check",
-      statusBadge: "COMING SOON",
+      statusBadge: "16 August, 4-7pm",
       title: "Eat, Draw, Play",
       where: "Subak, KL",
       description: "Come join us at our long Sunday doodle table. Just good food, one giant sheet of paper, crayons and a roomful of curious humans.",
@@ -82,7 +82,7 @@ const CONFIG = {
 
       // No "dateOptions" here on purpose — this card doesn't use date
       // selection. Its button opens the Tally form directly.
-      buttonText: "Register Interest",
+      buttonText: "REGISTER INTEREST",
 
       // EDIT ME: replace with your real Eat, Draw, Play Tally form ID.
       tallyFormId: "1AzbMI"
