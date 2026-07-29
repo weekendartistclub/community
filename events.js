@@ -91,9 +91,9 @@ const CONFIG = {
       kind: "Workshop",
       title: "Weekend Artist Signature",
       when: "September 2026",
-      where: "Studio 3, PJ",
-      description: "Our flagship weekend workshop. Select the date(s) that work for you, then continue to reserve your spot.",
-      spots: "Limited spots — pick your date(s) below",
+      where: "Venue TBA",
+      description: "8-hours over a weekend: an immersive creative experience. Check out our IG reels for a preview. Select the date(s) that work for you.",
+      spots: "Final dates will be announced end-August",
 
       // EDIT ME: swap this for the real photo once you have it.
       image: "images/workshop-one.jpg",
@@ -105,17 +105,18 @@ const CONFIG = {
       // EDIT ME: these labels are placeholders — replace them with the
       // exact date options set up inside your Workshop 1 Tally form.
       dateOptions: [
-        { label: "Sat 9 Aug · 10:00–12:30" },
-        { label: "Sat 16 Aug · 10:00–12:30" }
+        { label: "Sept 12 and 13 2026" },
+        { label: "Sept 19 and 20 2026" }
+        { label: "Sept 26 and 27 2026" }
       ]
     },
     {
       kind: "Workshop",
       title: "Weekend Artist Movement Edition",
       when: "October 2026",
-      where: "Studio 3, PJ",
-      description: "A hands-on, movement-focused session. Select the date(s) that work for you, then continue to reserve your spot.",
-      spots: "Limited spots — pick your date(s) below",
+      where: "Venue TBA",
+      description: "A movement/dance focused session for those who think with their bodies. Select the date(s) that work for you.",
+      spots: "Final dates will be announced end-September",
 
       // EDIT ME: swap this for the real photo once you have it.
       image: "images/workshop-two.jpg",
@@ -127,8 +128,11 @@ const CONFIG = {
       // EDIT ME: these labels are placeholders — replace them with the
       // exact date options set up inside your Workshop 2 Tally form.
       dateOptions: [
-        { label: "Sun 17 Aug · 2:00–5:00" },
-        { label: "Sun 31 Aug · 2:00–5:00" }
+        { label: "October 3 and 4 2026" },
+        { label: "October 10 and 11 2026" }
+        { label: "October 17 and 18 2026" }
+        { label: "October 24 and 25 2026" }
+        { label: "October 31 and Nov 1 2026" }
       ]
     }
   ],
