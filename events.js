@@ -74,7 +74,7 @@ const CONFIG = {
       statusBadge: "COMING SOON",
       title: "Eat, Draw, Play",
       where: "16th August, 4-7pm. Subak, KL",
-      description: "Come join us at our long Sunday doodle table. Just good food, one giant sheet of paper, crayons and a roomful of curious humans.",
+      description: "Join us at our long Sunday doodle table. Come alone or with friends =) Just good food, one giant sheet of paper, crayons and a roomful of curious humans.",
 
       // EDIT ME: swap this for the real photo once you have it.
       image: "images/eat-draw-play.jpg",
