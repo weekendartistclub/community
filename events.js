@@ -88,7 +88,7 @@ const CONFIG = {
       tallyFormId: "1AzbMl"
     },
     {
-      kind: "Workshop",
+      kind: "Workshop Date Poll",
       title: "Weekend Artist Signature",
       when: "September 2026",
       where: "Venue TBA",
@@ -111,7 +111,7 @@ const CONFIG = {
       ]
     },
     {
-      kind: "Workshop",
+      kind: "Workshop Date Poll",
       title: "Weekend Artist Movement Edition",
       when: "October 2026",
       where: "Venue TBA",
