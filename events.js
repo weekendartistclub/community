@@ -71,9 +71,9 @@ const CONFIG = {
   workshops: [
     {
       kind: "Interest Check",
-      statusBadge: "16 August, 4-7pm",
+      statusBadge: "COMING SOON",
       title: "Eat, Draw, Play",
-      where: "Subak, KL",
+      where: "16th August, 4-7pm. Subak, KL",
       description: "Come join us at our long Sunday doodle table. Just good food, one giant sheet of paper, crayons and a roomful of curious humans.",
 
       // EDIT ME: swap this for the real photo once you have it.
