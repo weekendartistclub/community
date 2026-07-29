@@ -106,7 +106,7 @@ const CONFIG = {
       // exact date options set up inside your Workshop 1 Tally form.
       dateOptions: [
         { label: "Sept 12 and 13 2026" },
-        { label: "Sept 19 and 20 2026" }
+        { label: "Sept 19 and 20 2026" },
         { label: "Sept 26 and 27 2026" }
       ]
     },
@@ -129,9 +129,9 @@ const CONFIG = {
       // exact date options set up inside your Workshop 2 Tally form.
       dateOptions: [
         { label: "October 3 and 4 2026" },
-        { label: "October 10 and 11 2026" }
-        { label: "October 17 and 18 2026" }
-        { label: "October 24 and 25 2026" }
+        { label: "October 10 and 11 2026" },
+        { label: "October 17 and 18 2026" },
+        { label: "October 24 and 25 2026" },
         { label: "October 31 and Nov 1 2026" }
       ]
     }
