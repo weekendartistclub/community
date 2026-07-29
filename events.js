@@ -85,7 +85,7 @@ const CONFIG = {
       buttonText: "REGISTER INTEREST",
 
       // EDIT ME: replace with your real Eat, Draw, Play Tally form ID.
-      tallyFormId: "1AzbMI"
+      tallyFormId: "1AzbMl"
     },
     {
       kind: "Workshop",
