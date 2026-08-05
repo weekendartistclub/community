@@ -50,7 +50,7 @@ const CONFIG = {
       // EDIT ME: replace with your final Tally form share link once
       // you've confirmed it. Clicking the "Sign Up" button opens this
       // exact URL in a new browser tab.
-      registrationUrl: "https://tally.so/forms/1AYvxb/share"
+      registrationUrl: "https://tally.so/forms/1AYvxb"
     }
   ],
 
