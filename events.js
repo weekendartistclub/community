@@ -35,10 +35,10 @@ const CONFIG = {
   //     registrationUrl: "https://tally.so/forms/1AYvxb/share"
   events: [
     {
-      kind: "Interest Check",
-      statusBadge: "COMING SOON",
+      kind: "Sign Ups Open",
+      statusBadge: "HAPPENING SOON",
       title: "Eat, Draw, Play",
-      where: "16th August, 4-7pm. Subak, KL",
+      where: "16th August, 4-7pm. Subak Restaurant, KL (near TTDI)",
       description: "Join us at our long Sunday doodle table. Come alone or with friends =) Just good food, one giant sheet of paper, crayons and a roomful of curious humans.",
 
       // EDIT ME: swap this for the real photo once you have it.
@@ -50,7 +50,7 @@ const CONFIG = {
       // EDIT ME: replace with your final Tally form share link once
       // you've confirmed it. Clicking the "Sign Up" button opens this
       // exact URL in a new browser tab.
-      registrationUrl: "https://tally.so/forms/1AYvxb"
+       tallyFormId: "1AYvxb",
     }
   ],
 
