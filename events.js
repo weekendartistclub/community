@@ -39,7 +39,7 @@ const CONFIG = {
       statusBadge: "POSTPONED TILL FURTHER NOTICE",
       title: "Eat, Draw, Play",
       where: "16th August, 4-7pm. Subak Restaurant, KL (near TTDI)",
-      description: "*We're postponing this outdoor event till the skies clear. Follow us on Instagram for the latest updates. Join us at our long Sunday doodle table. Come alone or with friends =) Just good food, one giant sheet of paper, crayons and a roomful of curious humans.",
+      description: "*We're postponing this outdoor event till the skies clear. Follow us on Instagram for the latest updates.",
 
       // EDIT ME: swap this for the real photo once you have it.
       image: "images/eat-draw-play.jpg",
