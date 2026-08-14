@@ -35,11 +35,11 @@ const CONFIG = {
   //     registrationUrl: "https://tally.so/forms/1AYvxb/share"
   events: [
     {
-      kind: "Sign Ups Open",
-      statusBadge: "HAPPENING SOON",
+      kind: "We'll be back!",
+      statusBadge: "POSTPONED TILL FURTHER NOTICE",
       title: "Eat, Draw, Play",
       where: "16th August, 4-7pm. Subak Restaurant, KL (near TTDI)",
-      description: "Join us at our long Sunday doodle table. Come alone or with friends =) Just good food, one giant sheet of paper, crayons and a roomful of curious humans.",
+      description: "*We're postponing this outdoor event till the skies clear. Follow us on Instagram for the latest updates. Join us at our long Sunday doodle table. Come alone or with friends =) Just good food, one giant sheet of paper, crayons and a roomful of curious humans.",
 
       // EDIT ME: swap this for the real photo once you have it.
       image: "images/eat-draw-play.jpg",
