@@ -38,7 +38,7 @@ const CONFIG = {
       kind: "We'll be back!",
       statusBadge: "POSTPONED TILL FURTHER NOTICE",
       title: "Eat, Draw, Play",
-      where: "16th August, 4-7pm. Subak Restaurant, KL (near TTDI)",
+      where: "Date & Time TBA. Subak Restaurant, KL (near TTDI)",
       description: "*We're postponing this outdoor event till the skies clear. Follow us on Instagram for the latest updates.",
 
       // EDIT ME: swap this for the real photo once you have it.
@@ -108,10 +108,10 @@ const CONFIG = {
     {
       kind: "Workshop Date Poll",
       title: "Weekend Artist Signature",
-      when: "September 2026",
+      when: "Early 2027",
       where: "Venue TBA",
       description: "8-hours over a weekend: an immersive creative experience. Check out our IG reels for a preview. Select the date(s) that work for you.",
-      spots: "Final dates will be announced end-August",
+      spots: "TBA 2027",
 
       // EDIT ME: swap this for the real photo once you have it.
       image: "images/workshop-one.jpg",
@@ -131,10 +131,10 @@ const CONFIG = {
     {
       kind: "Workshop Date Poll",
       title: "Weekend Artist Movement Edition",
-      when: "October 2026",
+      when: "2027",
       where: "Venue TBA",
       description: "A movement/dance focused session for those who think with their bodies. Select the date(s) that work for you.",
-      spots: "Final dates will be announced end-September",
+      spots: "TBA 2027",
 
       // EDIT ME: swap this for the real photo once you have it.
       image: "images/workshop-two.jpg",
