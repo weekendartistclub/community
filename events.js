@@ -41,8 +41,8 @@ const CONFIG = {
   events: [
     {
       kind: "Halloween Special",
-      title: "Real Goddess Howl at the Moon",
-      when: "October 31, 7-10pm",
+      title: "Real Goddesses Howl at the Moon",
+      when: "October 31, 7-11pm",
       where: "Cosmic Theatre Hub, Phileo Damansara",
       description: "An intimate all-girls Halloween photography party.",
 
