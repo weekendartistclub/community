@@ -46,10 +46,9 @@ const CONFIG = {
       where: "Cosmic Theatre Hub, Phileo Damansara",
       description: "An intimate all-girls Halloween photography party.",
 
-      // EDIT ME: when you have a photo for this event, add these two
-      // lines (and save the photo into the "images" folder):
-      //   image: "images/real-goddess-howl-at-the-moon.jpg",
-      //   imageAlt: "Short description of the photo",
+      // EDIT ME: when you have a photo for this event:
+      image: "images/real-goddess-howl-at-the-moon.jpg",
+      imageAlt: "Short description of the photo",
 
       buttonText: "Sign Up",
 
