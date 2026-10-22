@@ -41,6 +41,7 @@ const CONFIG = {
   events: [
     {
       kind: "Halloween Special",
+      status badge: "Max Capacity"
       title: "Real Goddesses Howl at the Moon",
       when: "October 31, 7-11pm",
       where: "Cosmic Theatre Hub, Phileo Damansara",
